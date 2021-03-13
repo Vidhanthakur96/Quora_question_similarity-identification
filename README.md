@@ -1,1 +1,5 @@
 # Quora_question_similarity-identification
+There are approximately 3K to 4K questions posted on quora every day so there is always a high possiblity of certain questions to be redundant, so we try to solve this problem using few approaches firstly we pre-process the required columns by cleaning them and converting to correct data types. 
+Cosine similarity - Here we perform cosine similarity check to identify how similar 2 targetted questions are and based on the similarity score we compare it with the output label. But it was found that Cosine similarity was not an effective way to identify similar question as there would be challenges like phrase change and synonyms which make it difficult to identify similar questions 
+BOW and Xgboast - Initially we preprocess the data, and tokenize it to create a BOW then we concat a row of questions and pass it to XGBoost model along with the label and then test it on 33% of the dataset 
+TFIDF and Xgboast - Initially we preprocess the data, and tokenize it using TFIDF using 5000 tokens then form a vector for question1 and question2 and pass it to XGBoost model along with the label and then test it on 33% of the dataset
